@@ -32,9 +32,4 @@ export default {
 };
 </script>
 
-<style>
-#single-food {
-  max-width: 960px;
-  margin: 0 auto;
-}
-</style>
+<style></style>

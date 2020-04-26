@@ -61,7 +61,6 @@ export default {
           this.food
         )
         .then(function(data) {
-          console.log(data);
           this.submitted = true;
         });
     }
