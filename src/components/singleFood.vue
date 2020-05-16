@@ -2,7 +2,7 @@
   <div id="single-food">
     <h1>{{ food.title }}</h1>
     <article>{{ food.content }}</article>
-    <p>Author {{ food.author }}</p>
+    <p>Author: {{ food.autor }}</p>
     <ul>
       <li v-for="category in food.categories">{{ category }}</li>
     </ul>
@@ -32,4 +32,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#single-food{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: peachpuff;
+    border: 1px dotted crimson;
+}
+h1{
+  text-decoration: none;
+}
+</style>

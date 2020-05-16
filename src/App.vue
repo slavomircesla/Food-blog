@@ -1,8 +1,13 @@
 <template>
+<div>
+  <app-header id="header"></app-header>
   <div>
-    <app-header></app-header>
     <router-view></router-view>
   </div>
+  <footer>
+        <p>Copyright© 2020 Slavomir </p>
+    </footer>
+</div>
 </template>
 
 <script>
@@ -16,7 +21,7 @@ export default {
     "foods-show": showFoods,
     "foods-list": listFoods,
     "add-food": addFood,
-    "app-header": header
+    "app-header": header,
   },
   data() {
     return {};
@@ -25,4 +30,17 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+}
+footer{
+    background: crimson;
+    padding: 6px;
+}
+footer p{
+ color: peachpuff;
+ text-align: center;
+}
+</style>

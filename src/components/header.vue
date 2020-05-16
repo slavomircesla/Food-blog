@@ -1,9 +1,11 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/" exact>Jedla</router-link></li>
       <li>
         <router-link to="/addFood" exact>Pridat nove jedlo</router-link>
+        </li>
+      <li>
+        <router-link to="/" exact>Jedla</router-link>
       </li>
     </ul>
   </nav>
@@ -14,16 +16,28 @@ export default {};
 </script>
 
 <style scoped>
-nav {
-  margin-top: 0px;
+ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
 }
-ul {
-  margin-top: 0px;
+li{
+    display: inline-block;
+    margin: 0 10px;
 }
-
-@media only screen and (min-width: 769px) {
-  nav {
-    background-color: lightblue;
-  }
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+nav{
+    background: crimson;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+.router-link-active{
+    background: rgba(255,255,255,0.8);
+    color: #444;
 }
 </style>

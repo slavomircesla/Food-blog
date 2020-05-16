@@ -1,7 +1,9 @@
 <template>
   <div id="all-foods">
-    <h1>Vsetky Clanky o jedlach</h1>
+    <h1>Všetky Jedlá:</h1>
+    <div id="text-style">
     <input type="text" v-model="search" placeholder="search foods" />
+    </div>
     <div v-for="food in filteredFoods" class="single-food">
       <router-link v-bind:to="'/food/' + food.id">
         <h2>{{ food.title }}</h2>
@@ -12,7 +14,6 @@
 </template>
 
 <script>
-// Imports
 import searchMixin from "../mixins/searchMixin";
 export default {
   data() {
@@ -40,4 +41,36 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+#all-foods{
+    max-width: 800px;
+    margin: 0px auto;
+    height: 594px;
+}
+.single-food{
+    padding: 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    background: peachpuff;
+    border: 1px dotted #aaa;
+    text-decoration: none;
+}
+#text-style{
+  border: 1px solid grey;
+  border-left: 1px solid grey;
+  width: 90%;
+  margin-left: 5%;
+}
+#all-foods a{
+    color: crimson;
+    text-decoration: none;
+}
+input[type="text"]{
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer{
+  display: none;
+}
+</style>
