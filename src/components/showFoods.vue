@@ -75,4 +75,9 @@ h1{
 footer{
   display: none;
 }
+@media screen and (max-width: 992px) {
+  h1{
+    margin-left: 10px;
+  }
+}
 </style>

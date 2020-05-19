@@ -29,10 +29,22 @@ export default {
 body{
     margin: 0;
     font-family: 'Nunito SemiBold';
-    background-image: url(/src/images/12.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    background-size: cover;
+}
+#background-image{
+background-image: url(/src/images/12.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  #background-image {
+  background-image: url(/src/images/10.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 }
 </style>

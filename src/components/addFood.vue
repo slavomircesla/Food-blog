@@ -46,7 +46,7 @@
       <h3>Jedlo</h3>
       <p>Nazov jedla: {{ food.title }}</p>
       <p style="white-space: break-spaces">Suroviny: <br> {{ food.ingredients }}</p>
-      <p>Recept:</p>
+      <p style="font-weight: bold">Recept:</p>
       <p style="white-space: break-spaces">{{ food.content }}</p>
       <p>Druh jedla:</p>
       <ul>
