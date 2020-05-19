@@ -1,11 +1,15 @@
 <template>
   <div id="single-food">
     <h1>{{ food.title }}</h1>
-    <article>{{ food.content }}</article>
-    <p>Author: {{ food.autor }}</p>
-    <ul>
+    <article id="food-ingredients">{{food.ingredients}}</article>
+    <article id="food-article">{{ food.content }}</article>
+    <p>Autor: {{ food.autor }}</p>
+    <div>
+      <span>Kategorie: </span>
+      <ul>
       <li v-for="category in food.categories">{{ category }}</li>
     </ul>
+    </div>
   </div>
 </template>
 
@@ -42,5 +46,11 @@ export default {
 }
 h1{
   text-decoration: none;
+}
+#food-article{
+  white-space: pre-wrap;
+}
+#food-ingredients{
+  white-space: pre-wrap;
 }
 </style>

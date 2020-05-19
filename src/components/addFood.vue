@@ -1,19 +1,36 @@
 <template>
   <div id="add-blog">
-    <h2>Pridat nove jedlo</h2>
     <form v-if="!submitted" required>
       <h3>Názov jedla :</h3>
       <input type="text" id="input-type-title" v-model.lazy="food.title" required />
+      <h3>Suroviny :</h3>
+      <textarea v-model.lazy.trim="food.ingredients" id="food-ingredients" required></textarea>
       <h3>Recept :</h3>
       <textarea v-model.lazy.trim="food.content" id="textarea" required></textarea>
       <div id="checkboxes">
         <p>Druh jedla:</p>
         <label>Raňajky</label>
-        <input type="checkbox" value="Ranajky" v-model="food.categories" />
+        <input type="checkbox" value="Raňajky" v-model="food.categories" />
+        <label>Desiata</label>
+        <input type="checkbox" value="Desiata" v-model="food.categories" />
         <label>Obed</label>
         <input type="checkbox" value="Obed" v-model="food.categories" />
+        <label>Olovrant</label>
+        <input type="checkbox" value="Olovrant" v-model="food.categories" />
         <label>Večera</label>
-        <input type="checkbox" value="Vecera" v-model="food.categories" />
+        <input type="checkbox" value="Večera" v-model="food.categories" />
+        <label>Polievky</label>
+        <input type="checkbox" value="Polievky" v-model="food.categories" />
+        <label>Vegetariánske</label>
+        <input type="checkbox" value="Vegetariánske" v-model="food.categories" />
+        <label>Vegánske</label>
+        <input type="checkbox" value="Vegánske" v-model="food.categories" />
+        <label>Dezerty</label>
+        <input type="checkbox" value="Dezerty" v-model="food.categories" />
+        <label>Nápoje</label>
+        <input type="checkbox" value="Nápoje" v-model="food.categories" />
+         <label>Prílohy</label>
+        <input type="checkbox" value="Prílohy" v-model="food.categories" />
       </div>
       <label>Autor:</label>
       <select v-model="food.autor">
@@ -28,8 +45,9 @@
     <div id="preview">
       <h3>Jedlo</h3>
       <p>Nazov jedla: {{ food.title }}</p>
+      <p style="white-space: break-spaces">Suroviny: <br> {{ food.ingredients }}</p>
       <p>Recept:</p>
-      <p style="white-space: pre">{{ food.content }}</p>
+      <p style="white-space: break-spaces">{{ food.content }}</p>
       <p>Druh jedla:</p>
       <ul>
         <li v-for="category in food.categories">{{ category }}</li>
@@ -45,6 +63,7 @@ export default {
     return {
       food: {
         title: "",
+        ingredients:"",
         content: "",
         categories: [],
         autor: ""
@@ -92,14 +111,20 @@ input[type="text"], textarea, select{
     border:1px solid grey;
     padding: 8px;
 }
-textarea{
+#textarea{
     height:199px;
     font-size: 12px;
+}
+#food-ingredients{
+  font-size: 13px;
+  width: 40%;
+  height: 200px;
 }
 #preview{
     padding: 9px 20px;
     border: 1px dotted crimson;
     margin: 30px 0;
+    background: peachpuff;
 }
 h3{
     margin-top: 10px;
@@ -118,8 +143,9 @@ hr{
 button{
     display: block;
     margin: 20px 0;
-    background: crimson;
-    color: #fff;
+    background: peachpuff;
+    color: black;
+    font-weight: bold;
     border: 0;
     padding: 14px;
     border-radius: 4px;

@@ -1,13 +1,8 @@
 <template>
-<div>
+<div id="background-image">
   <app-header id="header"></app-header>
-  <div>
     <router-view></router-view>
   </div>
-  <footer>
-        <p>Copyright© 2020 Slavomir </p>
-    </footer>
-</div>
 </template>
 
 <script>
@@ -34,13 +29,10 @@ export default {
 body{
     margin: 0;
     font-family: 'Nunito SemiBold';
-}
-footer{
-    background: crimson;
-    padding: 6px;
-}
-footer p{
- color: peachpuff;
- text-align: center;
+    background-image: url(/src/images/12.jpg);
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>

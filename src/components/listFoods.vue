@@ -52,4 +52,6 @@ input[type="text"]{
     margin-left: 2%;
     width: 94%;
     box-sizing: border-box;
-}</style>
+}
+
+</style>

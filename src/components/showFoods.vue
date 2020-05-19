@@ -8,7 +8,6 @@
       <router-link v-bind:to="'/food/' + food.id">
         <h2>{{ food.title }}</h2>
       </router-link>
-      <article>{{ food.content }}</article>
     </div>
   </div>
 </template>
@@ -62,13 +61,16 @@ export default {
   margin-left: 5%;
 }
 #all-foods a{
-    color: crimson;
+    color: black;
     text-decoration: none;
 }
 input[type="text"]{
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
+}
+h1{
+ margin-left: 35%;
 }
 footer{
   display: none;
