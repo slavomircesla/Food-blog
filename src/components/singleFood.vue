@@ -2,6 +2,7 @@
   <div id="single-food">
     <h1>{{ food.title }}</h1>
     <article id="food-ingredients">{{food.ingredients}}</article>
+    <br>
     <article id="food-article">{{ food.content }}</article>
     <p>Autor: {{ food.autor }}</p>
     <div>

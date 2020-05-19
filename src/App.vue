@@ -30,9 +30,9 @@ body{
     margin: 0;
     font-family: 'Nunito SemiBold';
     background-image: url(/src/images/12.jpg);
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: cover;
 }
 </style>
